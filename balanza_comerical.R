@@ -6,6 +6,8 @@ library(dplyr)
 library(readr)
 library(ggplot2)
 
+## Los acentos se omiten intencionalmente
+
 # PATH
 
 # Cargar datos
@@ -32,5 +34,5 @@ total19 <- bc19 %>%
 bc19 %>% 
   filter(TIPO =='Exportaciones') %>%
   filter(CONCEPTO=="Petroleras" |  CONCEPTO=="No Petroleras") %>% 
-  ggplot(aes(x = MES, y =VAL_USD,color=CONCEPTO, group=CONCEPTO))+geom_line()+geom_
+  ggplot(aes(x = MES, y =VAL_USD,color=CONCEPTO, group=CONCEPTO))+geom_line()
   
